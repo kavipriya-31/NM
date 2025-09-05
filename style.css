@@ -496,3 +496,35 @@
                 height: 150px;
             }
         }
+/* Ensure card text wraps properly */
+.card p,
+.skill-card p,
+.card h3,
+.skill-card h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+  .card h3,
+  .skill-card h3 {
+    font-size: 1rem;
+  }
+
+  .card p,
+  .skill-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr; /* stack cards vertically */
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* single column on very small screens */
+  }
+}
+
